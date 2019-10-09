@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap/css/font-awesome-5.6.3.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap/css/mdb.css">
+    <link rel="stylesheet" href="bootstrap/css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <button class="toggler navbar-toggler " type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a href="#" id="nav-a" class="navbar-brand font-weight-bold">Happy Shopping</a>
+    <div class="toggler-icon collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+        <ul class="list list-unstyled d-lg-flex">
+            <li>
+                <a href="index.html" class="w-responsive">Men</a>
+            </li>
+            <li>
+                <a href="index.html">Women</a>
+            </li>
+            <li>
+                <a href="index.html">Kids</a>
+            </li>
+        </ul>
+    </div>
+    <a href="#" data-toggle="modal" data-target="#cartmodal"><i class="fab fa-opencart">Cart<span class="itemCount badge badge-danger ml-2"></span></i></a>
+    <ul class="icons navbar-nav d-flex flex-row list-unstyled ">
+        <li class="icons nav-item p-2">
+            <a href="https://www.facebook.com/pickmycloth/" target="_blank" class="icons-sm fb-ic nav-link"><i class="fab fa-facebook-f"></i></a>
+        </li>
+        <li class="icons nav-item  p-2">
+            <a href="https://www.instagram.com/pickmycloth/?hl=en" target="_blank" class="icons-sm pin-ic nav-link"><i class="fab fa-instagram"></i></a>
+        </li>
+        <li class="icons nav-item  p-2">
+            <a href="#" target="_blank" class="icons-sm gplus-ic nav-link"><i class="fab fa-google-plus-g"></i></a>
+        </li>
+        <li class="icons nav-item  p-2">
+            <a href="#" target="_blank" class="icons icons-sm tw-ic nav-link"><i class="fab fa-twitter"></i></a>
+        </li>
+    </ul>
+</nav>
+
+
+<!-----------------------------------Go To Cart----------------------------------->
+
+
+<div class="text-center m-4">
+<h4>Cart List</h4>
+    <hr>
+    <div class="show-cart">
+
+    </div>
+    <hr><br>
+    <div>
+        <h6 class="font-italic">TotalPrice: Rs.<span class="total-cart"></span></h6>
+    </div>
+<div>
+    <form class="form-group">
+        <table>
+            <tr>
+                <td>
+                    <label for="coupon" class="promotional-card font-weight-bold">Promotional Code</label>
+                </td>
+                <td>
+                    <input type="text" maxlength="5" placeholder="Enter your coupon code" class="form-control w-auto h-25" id="coupon">
+                </td>
+                <td>
+                    <button class="btn btn-info btn-sm apply-coupon">Apply Coupon</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+    <div class="">
+        <a href="#" class="order-cart btn btn-primary btn-sm  p-2" role="button" data-toggle="modal" data-target="#address-modal" data-dismiss="modal">Order Now</a>
+        <a href="index.html" class="btn btn-primary btn-sm p-2" role="button" type="button">Continue Shopping</a>
+        <button class="clear-cart btn btn-primary btn-sm">Clear Cart</button>
+    </div>
+</div>
+
+<!-------------------------------Address----------------------------------->
+
+<div class="modal fadeOut" tabindex="-1" role="dialog" id="address-modal">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-teal">
+                <h5 class="modal-title text-white font-italic font-weight-bold">Shipping Information</h5>
+                <button class="close text-white-50" type="button" data-dismiss="modal"><span>&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label class="font-weight-bold col-form-label">First Name</label>
+                        <input class="input-group-sm form-control" type="text" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-weight-bold col-form-label">Contact Number</label>
+                        <input type="tel" placeholder="Phone Number" maxlength="10" class="number form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-weight-bold col-form-label">Email-Id</label>
+                        <input class="form-control" type="email" placeholder="Enter your Email-id" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-weight-bold col-form-label">Address</label>
+                        <textarea class="form-control" rows="2" cols="28" placeholder="Enter your Address" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-weight-bold col-form-label">City Name</label>
+                        <input class="form-control" type="text" placeholder="Enter your cityname" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-weight-bold col-form-label" for="option">State</label>
+                        <select class="form-control" id="option">
+                            <option>Select</option>
+                            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                            <option value="Andhra pradesh">Andhra pradesh</option>
+                            <option value="Assam">Assam</option>
+                            <option value="Bihar">Bihar</option>
+                            <option value="Chattisgarh">Chattisgarh</option>
+                            <option value="Goa">Goa</option>
+                            <option value="Gujarat">Gujarat</option>
+                            <option value="Haryana">Haryana</option>
+                            <option value="Himachal Pradesh">Himachal Pradesh</option>
+                            <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                            <option value="Jharkand">Jharkand</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Kerala">Kerala</option>
+                            <option value="Madhya Pradesh">Madhya Pradesh</option>
+                            <option value="Maharastra">Maharastra</option>
+                            <option value="Manipur">Manipur</option>
+                            <option value="Meghalaya">Meghalaya</option>
+                            <option value="Mizoram">Mizoram</option>
+                            <option value="Nagaland">Nagaland</option>
+                            <option value="Orissa">Orissa</option>
+                            <option value="Punjab">Punjab</option>
+                            <option value="Rajasthan">Rajasthan</option>
+                            <option value="Sikkim">Sikkim</option>
+                            <option value="Tamil Nadu">Tamil Nadu</option>
+                            <option value="Telangana">Telangana</option>
+                            <option value="Tripura">Tripura</option>
+                            <option value="Uttaranchal">Uttaranchal</option>
+                            <option value="West Bengal">West Bengal</option>
+                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-weight-bold col-form-label">Pin Code</label>
+                        <input class="form-control" type="tel" maxlength="5" placeholder="Enter your PinCode" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-weight-bold col-form-label">Land Mark</label>
+                        <textarea class="form-control" placeholder="LandMark" rows="2" cols="30"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer bg-teal">
+                <a href="#" class="btn btn-sm btn-primary" role="button" type="button" data-toggle="modal" data-target="#pay-modal" data-dismiss="modal" >Pay Now</a>
+                <a href="#" class="btn btn-primary btn-sm" role="button" type="button" data-toggle="modal" data-target="#order-modal" data-dismiss="modal">Cash On Delivery</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!----------------------------Order Now Modal------------------------------->
+
+<div class="modal fadeOut" tabindex="-1" role="dialog" id="order-modal">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-teal align-content-center">
+                <h3 class="font-weight-bolder green-text ">Thank You!</h3>
+                <button class="close text-white-50" type="button" data-dismiss="modal"><span>&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <h4>Order has been placed Successfully!<br><span class="blue-text">Happy Shopping</span></h4>
+            </div>
+            <div class="modal-footer">
+                <a href="index.html" class="btn btn-primary btn-sm" role="button" type="button">Continue Shopping</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--------------------------------Pay Now-------------------------------->
+<div class="modal fadeOut" role="dialog" id="pay-modal">
+    <div class="modal-dialog bg-teal" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-teal align-content-center">
+                <h3 class="font-weight-bolder white-text">Card Details</h3>
+                <button class="close text-white-50" type="button" data-dismiss="modal"><span>&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label class="font-weight-bold">Card Number</label>
+                        <input class="form-control" type="tel" maxlength="16" placeholder="Enter your Card Number" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-weight-bold">CVV</label>
+                        <input class="form-control" type="tel" maxlength="3" placeholder="Enter 3 Digit CVV" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-weight-bold">Name of the Card Holder</label>
+                        <input class="form-control" type="text" placeholder="Enter your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-weight-bold">Valid Till</label>
+                        <input class="form-control" type="date" placeholder="" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-weight-bold" for="pay-card">Expiration Date</label>
+                        <select class="custom-select-sm" id="pay-card">
+                            <option>Month</option>
+                            <option value="01">January</option>
+                            <option value="02">February </option>
+                            <option value="03">March</option>
+                            <option value="04">April</option>
+                            <option value="05">May</option>
+                            <option value="06">June</option>
+                            <option value="07">July</option>
+                            <option value="08">August</option>
+                            <option value="09">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                        <select>
+                            <option>Year</option>
+                            <option value="16"> 2016</option>
+                            <option value="17"> 2017</option>
+                            <option value="18"> 2018</option>
+                            <option value="19"> 2019</option>
+                            <option value="20"> 2020</option>
+                            <option value="21"> 2021</option>
+                            <option value="22"> 2022</option>
+                            <option value="23"> 2023</option>
+                            <option value="24"> 2024</option>
+                            <option value="25"> 2025</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer bg-teal">
+                <a class="btn btn-sm btn-primary" role="button" type="button" data-toggle="modal" data-target="#order-modal" data-dismiss="modal">Submit Payment</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<footer class="page-footer font-small special-color-dark pt-4 mt-5">
+    <ul class="d-flex flex-row list-unstyled justify-content-center">
+        <li class="p-2">
+            <a href="https://www.facebook.com/pickmycloth/" target="_blank" class="icons-sm fb-ic nav-link"><i class="fab fa-facebook-f"></i></a>
+        </li>
+        <li class="p-2">
+            <a href="https://www.instagram.com/pickmycloth/?hl=en" target="_blank" class="icons-sm pin-ic nav-link"><i class="fab fa-instagram"></i></a>
+        </li>
+        <li class="p-2">
+            <a href="#" target="_blank" class="icons-sm gplus-ic nav-link"><i class="fab fa-google-plus-g"></i></a>
+        </li>
+        <li class="p-2">
+            <a href="#" target="_blank" class="icons-sm tw-ic nav-link"><i class="fab fa-twitter"></i></a>
+        </li>
+    </ul>
+    <div class="footer-copyright text-center py-3">© 2019 Copyright:
+        <a href="index.html"> Happy Shopping.com</a>
+    </div>
+</footer>
+
+<script src="bootstrap/js/jquery-3.3.1.min.js"></script>
+<script src="bootstrap/js/popper.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="bootstrap/js/mdb.min.js"></script>
+<script src="Script.js"></script>
+</body>
+</html>
